@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: repicodus_development
+
+test:
+  adapter: postgresql
+  database: repicodus_test
