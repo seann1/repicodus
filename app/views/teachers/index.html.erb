@@ -1,0 +1,18 @@
+<h1>Teacher</h1>
+<h2>Click on anything to edit or delete</h2>
+
+<ul>
+  <% @tomes.each do |tome| %>
+    <li><%= tome.description %></li>
+    <% tome.chapters.each do |chapter| %>
+      <ul>
+        <li><%= chapter.description %></li>
+              <ul>
+                <% chapter.lessons.each do |lesson| %>
+                <li><a href="/lessons/<%= lesson.id %>"><%= lesson.description %></a></li>
+                <% end %>
+              </ul>
+      </ul>
+      <% end %>
+  <% end %>
+</ul>

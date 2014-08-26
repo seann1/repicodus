@@ -1,11 +1,11 @@
 class TeachersController < ApplicationController
   def index
-    @teachers = Teacher.all
+    @tomes = Tome.all
     render('teachers/index.html.erb')
   end
 
   def show
-    @teacher = Teacher.find(params[:id])
-    render('teachers/show.html.erb')
+    @tome = Tome.find(params[:id])
+    render('tomes/show.html.erb')
   end
 end
