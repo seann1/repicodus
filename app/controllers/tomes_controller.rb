@@ -4,6 +4,11 @@ class TomesController < ApplicationController
     render('tomes/index.html.erb')
   end
 
+  def new
+    @tome = Tome.new
+    render('tomes/new.html.erb')
+  end
+
   def show
     @tome = Tome.find(params[:id])
     render('tomes/show.html.erb')
