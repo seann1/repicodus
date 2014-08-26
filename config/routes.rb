@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   match('/teachers', {:via => :post, :to => 'teachers#edit_tome'})
 
   match('tomes/new', {:via => :get, :to => 'tomes#new'})
+  match('tomes', {:via => :post, :to => 'tomes#create'})
 
   match('lessons/:id/edit', {:via => :post, :to => 'lessons#edit'})
 

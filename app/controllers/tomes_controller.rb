@@ -9,6 +9,12 @@ class TomesController < ApplicationController
     render('tomes/new.html.erb')
   end
 
+  def create
+    @tome = Tome.create(:number => params[:name],
+                        :description => params[:description])
+    redirect_to('/teachers')
+  end
+
   def show
     @tome = Tome.find(params[:id])
     render('tomes/show.html.erb')
