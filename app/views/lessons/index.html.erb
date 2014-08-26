@@ -1,0 +1,8 @@
+<% split_url = (request.url).split('/') %>
+<% lesson_id = split_url.last.to_i %>
+<% @lessons.each do |lesson| %>
+  <% if lesson_id == lesson.id %>
+  <h1><%= lesson.description %></h1>
+  <p><%= lesson.content %></p>
+  <% end %>
+<% end %>

@@ -1,9 +1,2 @@
-<h1> Lesson </h1>
-<ul>
-  <% so_split = (request.url).split('/') %>
-  <%  %>
-  <% request.url %>
-  <% @lessons.each do |lesson| %>
-    <li><%= lesson.description %></li>
-  <% end %>
-</ul>
+<h1><%= @lesson.description %></h1>
+<p><%= @lesson.content %></p>
