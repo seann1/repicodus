@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   match('tomes', {:via => :get, :to => 'tomes#show'})
 
   match('lessons/:id', {:via => :get, :to => 'lessons#show'})
+
+  match('/teachers', {:via => :get, :to => 'teachers#index'})
 end
