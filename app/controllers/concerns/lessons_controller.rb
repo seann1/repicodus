@@ -1,11 +1,6 @@
-class lessonsController < ApplicationController
-  def index
-    @lessons = Lesson.all
-    render('lessons/index.html.erb')
-  end
-
+class LessonsController < ApplicationController
   def show
-    @lesson = Lesson.find(params[:id])
+    @lesson = Lesson.where(params[:id])
     render('lessons/show.html.erb')
   end
 end
