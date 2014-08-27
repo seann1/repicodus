@@ -1,6 +1,6 @@
 class TomesController < ApplicationController
   def index
-    @tomes = Tome.all
+    @tomes = Tome.all.sort_by { |i| i.number }
     render('tomes/index.html.erb')
   end
 
@@ -10,12 +10,16 @@ class TomesController < ApplicationController
   end
 
   def create
-    @tomes = Tome.all
+    @tomes = Tome.all.sort_by { |i| i.number }
     @tome = Tome.new(:number => params[:number],
                      :description => params[:description])
+    @tomes.each do |tome|
+      if tome.number >= @tome.number
+        Tome.update(tome.id, {:number => (tome.number += 1)})
+      end
+    end
     if @tome.save
       redirect_to('/tomes')
-
     else
       render('teachers/index.html.erb')
     end

@@ -5,10 +5,6 @@ Rails.application.routes.draw do
 
   match('lessons/:id', {:via => :get, :to => 'lessons#show'})
 
-  match('/teachers', {:via => :get, :to => 'teachers#index'})
-  match('/teachers', {:via => :post, :to => 'teachers#edit_tome'})
-  match('/teachers/:teacher_id', {:via => :get, :to => 'teachers#index'})
-
   match('tomes/new', {:via => :get, :to => 'tomes#new'})
   match('tomes', {:via => :post, :to => 'tomes#create'})
 
