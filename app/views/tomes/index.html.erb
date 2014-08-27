@@ -2,7 +2,7 @@
 
 <ul>
   <% @tomes.each do |tome| %>
-    <li><%= tome.description %></li>
+    <li><a href="/tomes/<%= tome.id %>"><%= tome.description %></a></li>
     <% tome.chapters.each do |chapter| %>
       <ul>
         <li><%= chapter.description %></li>
