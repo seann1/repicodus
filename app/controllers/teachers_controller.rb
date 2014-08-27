@@ -7,7 +7,7 @@ class TeachersController < ApplicationController
       render('teachers/index.html.erb')
     else
       @tomes = Tome.all
-      redirect_to('tomes/index.html.erb')
+      redirect_to('tomes')
     end
   end
 

@@ -10,9 +10,15 @@ class TomesController < ApplicationController
   end
 
   def create
-    @tome = Tome.create(:number => params[:name],
-                        :description => params[:description])
-    redirect_to('/teachers')
+    @tomes = Tome.all
+    @tome = Tome.new(:number => params[:number],
+                     :description => params[:description])
+    if @tome.save
+      redirect_to('/tomes')
+
+    else
+      render('teachers/index.html.erb')
+    end
   end
 
   def show

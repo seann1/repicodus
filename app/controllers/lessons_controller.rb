@@ -11,6 +11,6 @@ class LessonsController < ApplicationController
 
   def edit
     @lesson = Lesson.find(params[:id])
-    render('lessons/#{lesson.id}/edit.html.erb')
+    render('lessons/edit.html.erb')
   end
 end
