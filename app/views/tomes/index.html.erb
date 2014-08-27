@@ -5,10 +5,10 @@
     <li><a href="/tomes/<%= tome.id %>"><%= tome.description %></a></li>
     <% tome.chapters.each do |chapter| %>
       <ul>
-        <li><a href="tomes/<%= tome.id %>/chapters/<%= chapter.id %>"><%= chapter.description %></a></li>
+        <li><a href="/tomes/<%= tome.id %>/chapters/<%= chapter.id %>"><%= chapter.description %></a></li>
               <ul>
                 <% chapter.lessons.each do |lesson| %>
-                <li><a href="tomes/<%= tome.id %>/chapters/<%= chapter.id %>/lessons/<%= lesson.id %>"><%= lesson.description %></a></li>
+                <li><a href="/tomes/<%= tome.id %>/chapters/<%= chapter.id %>/lessons/<%= lesson.id %>"><%= lesson.description %></a></li>
                 <% end %>
               </ul>
       </ul>

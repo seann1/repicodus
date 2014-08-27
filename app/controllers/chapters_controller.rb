@@ -5,13 +5,13 @@ class ChaptersController < ApplicationController
   end
 
   def new
-    @tome = Tome.find(params[:id])
+    @tome = Tome.find(params[:tome_id])
     @chapter = Chapter.new
     render('chapters/new.html.erb')
   end
 
   def create
-    @tome_id = params[:id]
+    @tome_id = params[:tome_id]
     @chapter = Chapter.new(:number => params[:number],
                            :tome_id => @tome_id,
                            :description => params[:description])
@@ -24,23 +24,25 @@ class ChaptersController < ApplicationController
   end
 
   def show
-    @chapter = Chapter.find(params[:id])
+    @tome = Tome.find(params[:tome_id])
+    @chapter = Chapter.find(params[:chapter_id])
     render('chapters/show.html.erb')
   end
 
   def edit
-    @chapter = Chapter.find(params[:id])
+    @tome_id = params[:tome_id]
+    @chapter = Chapter.find(params[:chapter_id])
     render('chapters/edit.html.erb')
   end
 
   def update
-    @tome_id = params[:id]
-    @chapter = Chapter.find(params[:id])
-    if @chapter.update(:id => params[:id],
+    @tome_id = params[:tome_id]
+    @chapter = Chapter.find(params[:chapter_id])
+    if @chapter.update(:id => params[:chapter_id],
                       :tome_id => params[:tome_id],
                       :description => params[:description],
                       :number => params[:number])
-      redirect_to("/chapters/#{@chapter.id}")
+      redirect_to("/tomes/#{@tome_id}/chapters/#{@chapter.id}")
     else
       render('chapters/edit.html.erb')
     end

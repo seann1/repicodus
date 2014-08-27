@@ -5,19 +5,24 @@ class LessonsController < ApplicationController
   end
 
   def show
-    @lesson = Lesson.find(params[:id])
+    @lesson = Lesson.find(params[:lesson_id])
     render('lessons/show.html.erb')
   end
 
   def edit
-    @lesson = Lesson.find(params[:id])
+    @tome_id = params[:tome_id]
+    @chapter_id = params[:chapter_id]
+    @lesson_id = params[:lesson_id]
+    @lesson = Lesson.find(params[:lesson_id])
     render('lessons/edit.html.erb')
   end
 
   def update
-    @lesson_id = params[:id]
-    @lesson = Lesson.find(params[:id])
-    if @lesson.update(:id => params[:id],
+    @tome_id = params[:tome_id]
+    @chapter_id = params[:chapter_id]
+    @lesson_id = params[:lesson_id]
+    @lesson = Lesson.find(params[:lesson_id])
+    if @lesson.update(:id => params[:lesson_id],
                       :chapter_id => params[:chapter_id],
                       :description => params[:description],
                       :content => params[:content],
@@ -34,7 +39,7 @@ class LessonsController < ApplicationController
   end
 
   def create
-    @chapter_id = params[:id]
+    @chapter_id = params[:chapter_id]
     @lessons = Lesson.all.sort_by { |i| i.number }
     @lesson = Lesson.new(:chapter_id => @chapter_id,
                          :description => params[:description],

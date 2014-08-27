@@ -26,18 +26,18 @@ class TomesController < ApplicationController
   end
 
   def show
-    @tome = Tome.find(params[:id])
+    @tome = Tome.find(params[:tome_id])
     render('tomes/show.html.erb')
   end
 
   def edit
-    @tome = Tome.find(params[:id])
+    @tome = Tome.find(params[:tome_id])
     render('tomes/edit.html.erb')
   end
 
   def update
-    @tome = Tome.find(params[:id])
-    if @tome.update(:id => params[:id],
+    @tome = Tome.find(params[:tome_id])
+    if @tome.update(:id => params[:tome_id],
                     :description => params[:description],
                     :number => params[:number])
       redirect_to("/tomes/#{@tome.id}")
