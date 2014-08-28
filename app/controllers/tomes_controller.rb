@@ -45,4 +45,10 @@ class TomesController < ApplicationController
       render('tomes/edit.html.erb')
     end
   end
+
+  def destroy
+    @tome = Tome.find(params[:tome_id])
+    @tome.destroy
+    redirect_to('/')
+  end
 end

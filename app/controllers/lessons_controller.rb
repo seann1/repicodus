@@ -27,7 +27,7 @@ class LessonsController < ApplicationController
                       :description => params[:description],
                       :content => params[:content],
                       :number => params[:number])
-      redirect_to("tomes/lessons/#{@lesson.id}")
+      redirect_to("/tomes/#{@tome_id}/chapters/#{@chapter_id}/lessons/#{@lesson_id}")
     else
       render('lessons/edit.html.erb')
     end
@@ -55,6 +55,15 @@ class LessonsController < ApplicationController
     else
       render('tomes/index.html.erb')
     end
+  end
+
+  def destroy
+    @tome_id = params[:tome_id]
+    @chapter_id = params[:chapter_id]
+    @lesson = Lesson.find(params[:lesson_id])
+    # @chapter = Chapter.find(:id => @lesson.chapter_id)
+    @lesson.destroy
+    redirect_to('/')
   end
 
 end

@@ -1,6 +1,13 @@
 <h1><%= @chapter.description %></h1>
 
 <a href="/tomes/<%= @chapter.tome_id %>/chapters/<%= @chapter.id %>/lessons/new">NEW LESSON</a>
+<br>
+
+<p><a href="/tomes/<%= @chapter.tome.id %>/chapters/<%= @chapter.id %>/destroy"data-confirm="You sure?"
+      data-method="delete"
+      rel="nofollow">Delete</a></p>
+
+<br>
 
 <p><a href='/tomes/<%= @chapter.tome_id %>/chapters/<%= @chapter.id %>/edit'>EDIT</a></p>
 <p><a href='/tomes/'>HOME</a></p>

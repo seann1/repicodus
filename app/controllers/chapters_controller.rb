@@ -47,4 +47,10 @@ class ChaptersController < ApplicationController
       render('chapters/edit.html.erb')
     end
   end
+
+  def destroy
+    @chapter = Chapter.find(params[:chapter_id])
+    @chapter.destroy
+    redirect_to('/')
+  end
 end
