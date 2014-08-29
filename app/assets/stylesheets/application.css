@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+
+/*!
+ * Bootstrap v3.2.0 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+body {
+  background-color: #D6DBCE;
+}
+#body {
+  background-color: #D6DBCE;
+}
+
+.jumbotron {
+  background-color: #CEF5E3;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  transition: background-color 4s;
+}
+
+.btn-success {
+  background-color: #F0CECE;
+  border-color: black;
+  color: black;
+  transition: background-color 7s, border-radius 12s;
+}
+
+.btn-success:hover {
+  background-color: #549DA8;
+  color: black;
+  border-radius: 10px;
+}
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+.jumbotron:hover {
+  background-color: #CEF5A4;
+}

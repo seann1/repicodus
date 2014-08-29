@@ -1,4 +1,7 @@
-<h1>New Tome</h1>
+
+<div class="container">
+<h1 class="jumbotron">New Tome</h1>
+<br>
 
 <% if @tome.errors.any? %>
   <h3>Please fix these errors:</h3>
@@ -9,15 +12,23 @@
   </ul>
 <% end %>
 
-<form action="/tomes" method="post">
-  <label for="tome_description">description</label>
-  <input id="tome_description" name="description" type="text">
-  <label for="tome_number">number</label>
-  <input id="tome_number" name="number" type="text">
-  <button>Create Tome</button>
+<form class="form-horizontal" action="/tomes" method="post">
+  <div class="form-group">
+  <label for="tome_description" class=" control-label">description</label>
+  <input id="tome_description" class="form-control" name="description" type="text">
+  <label for="tome_number" class=" control-label">number</label>
+  <input id="tome_number" class="form-control" name="number" type="text">
+  <br>
+  <br>
+  <br>
+
+</div>
+<button type="button" class="btn btn-success">Create Tome</button>
 </form>
 
 </br>
 </br>
 
-<a href="/">HOME</a>
+<button type="button" class="btn btn-success"><a href="/">HOME</a></button>
+
+</div>
