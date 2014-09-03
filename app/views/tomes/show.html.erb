@@ -1,13 +1,13 @@
+<div class="container">
+<h1 class="jumbotron"><%= @tome.description %></h1>
+<br>
+<button type="button" class="btn btn-success"><a href='/tomes/<%= @tome.id %>/edit'>EDIT</a></button>
 
-<h1><%= @tome.description %></h1>
-<br>
-<p><a href='/tomes/<%= @tome.id %>/edit'>EDIT</a></p>
-<br>
-<a href="/tomes/<%= @tome.id %>/chapters/new">NEW CHAPTER</a>
-<br>
-<br>
+<button type="button" class="btn btn-success"><a href="/tomes/<%= @tome.id %>/chapters/new">NEW CHAPTER</a></button>
 
-<p><a href="/tomes/<%= @tome.id %>/destroy"data-confirm="You sure?"
+
+<button type="button" class="btn btn-success"><a href="/tomes/<%= @tome.id %>/destroy"data-confirm="You sure?"
       data-method="delete"
-      rel="nofollow">Delete</a></p>
-<p><a href='/tomes/'>HOME</a></p>
+      rel="nofollow">DELETE</a></button>
+<button type="button" class="btn btn-success"><a href='/tomes/'>HOME</a></button>
+</div>

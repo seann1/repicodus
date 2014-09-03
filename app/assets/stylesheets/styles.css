@@ -1,0 +1,18 @@
+.text-area {
+  width: 50%;
+  height: 200px;
+  border-radius: 10px;
+  border-width: 3px;
+  border-color: gray;
+  background-color: #EBEBEB;
+  transition: background-color 4s;
+}
+
+.text-area:hover {
+  background-color: white;
+}
+
+.content {
+  color: #525252;
+  font-size: 20px;
+}

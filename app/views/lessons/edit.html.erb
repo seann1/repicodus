@@ -1,4 +1,6 @@
-<h1>Update Lesson for <%= @lesson.description %></h1>
+<div class="container">
+
+<h1 class="jumbotron">Update Lesson for <%= @lesson.description %></h1>
 
   <% if @lesson.errors.any? %>
     <h3>Please fix these errors:</h3>
@@ -11,20 +13,27 @@
 
 
 <form action="." method="post">
-  <input name="_method" type="hidden" value="patch">
+  <input name="_method" type="hidden" value="patch"></input>
 
   <label for="number">Number</label>
-  <input id="number" name="number" type="text" value="<%= @lesson.number %>">
+  <input class="form-control" id="number" name="number" type="text" value="<%= @lesson.number %>"></input>
 
   <label for="chapter_id">Chapter ID</label>
-  <input id="chapter_id" name="chapter_id" type="text" value="<%= @lesson.chapter_id %>">
+  <input class="form-control" id="chapter_id" name="chapter_id" type="text" value="<%= @lesson.chapter_id %>"></input>
 
   <label for="description">Description</label>
-  <input id="description" name="description" type="text" value="<%= @lesson.description %>">
-  <br>
-  <br>
-  <label for="content">Content Text</label>
-  <input id="content" name="content" type="text" value="<%= @lesson.content %>">
+  <input class="form-control" id="description" name="description" type="text" value="<%= @lesson.description %>"></input>
+  <br/>
 
-  <button type="submit">Update Lesson</button>
+  <label for="content">Content Text</label>
+  <br/>
+  <textarea class="text-area" id="content" name="content" type="text" value="<%= @lesson.content %>"></textarea>
+  <br/>
+  <br/>
+  <button type="submit" class="btn btn-success">Update Lesson</button>
 </form>
+<br/>
+<button type="button" class="btn btn-success"><a href="/">HOME</a></button>
+</div>
+
+

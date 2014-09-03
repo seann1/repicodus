@@ -33,7 +33,7 @@ body {
   border-style: solid;
   border-width: 1px;
   border-color: black;
-  transition: background-color 4s;
+  transition: background-color 4s, border-radius 4s;
 }
 
 .btn-success {
@@ -44,7 +44,7 @@ body {
 }
 
 .btn-success:hover {
-  background-color: #549DA8;
+  background-color: #FFBD4A;
   color: black;
   border-radius: 10px;
 }
@@ -58,4 +58,29 @@ a:hover {
 
 .jumbotron:hover {
   background-color: #CEF5A4;
+  border-radius: 10px;
+}
+
+.form-control {
+  background-color: #F0FCFB;
+  transition: background-color 1s;
+}
+
+.form-control:hover {
+  background-color: white;
+}
+
+.content-section {
+  background-color: white;
+  padding: 30px;
+  width: 65%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #A6A6A6;
+  transition: background-color 4s, border-radius 4s;
+}
+
+.content-section:hover {
+  background-color: #FFFEE3;
+  border-radius: 10px;
 }

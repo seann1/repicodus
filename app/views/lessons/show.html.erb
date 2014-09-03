@@ -1,15 +1,18 @@
-<h1><%= @lesson.description %></h1>
+<div class="container">
+
+<h1 class="jumbotron"><%= @lesson.description %></h1>
+
+<div class="content-section">
 <p><%= @lesson.content %></p>
+</div>
 
 <br>
 <br>
 
-<p><a href="/tomes/<%= @lesson.chapter.tome.id %>/chapters/<%= @lesson.chapter_id %>/lessons/<%= @lesson.id %>/destroy"data-confirm="You sure?"
+
+<button type="button" class="btn btn-success"><a href='/tomes/<%= @lesson.chapter.tome.id %>/chapters/<%= @lesson.chapter_id %>/lessons/<%= @lesson.id %>/edit'>EDIT</a></button>
+<button type="button" class="btn btn-success"><a href="/tomes/<%= @lesson.chapter.tome.id %>/chapters/<%= @lesson.chapter_id %>/lessons/<%= @lesson.id %>/destroy"data-confirm="You sure?"
       data-method="delete"
-      rel="nofollow">Delete</a></p>
-
-<br>
-<br>
-
-<p><a href='/tomes/<%= @lesson.chapter.tome.id %>/chapters/<%= @lesson.chapter_id %>/lessons/<%= @lesson.id %>/edit'>EDIT</a></p>
-<p><a href='/tomes/'>HOME</a></p>
+      rel="nofollow">DELETE</a></button>
+<button type="button" class="btn btn-success"><a href="/">HOME</a></button>
+</div>
