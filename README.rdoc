@@ -1,6 +1,4 @@
 Repicodus is a replica of http://learnhowtoprogram.com built with Ruby on Rails.
 by Sean Niesen
-This app is online at http://repicodus.herokuapp.com/
+This app is online at http://repicodus.herokuapp.com
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
